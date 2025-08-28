@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun ke-19!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .birthday-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(45deg, #3B82F6, #60A5FA, #93C5FD);
+            border-radius: 50%;
+            animation: fall linear forwards;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes fall {
+            to { transform: translateY(100vh); opacity: 0; }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #3B82F6;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3B82F6; }
+        }
+        
+        .music-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .music-btn.playing {
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen">
+    <!-- Confetti Container -->
+    <div id="confetti-container" class="fixed inset-0 pointer-events-none z-50"></div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <header class="text-center mb-12 birthday-animation">
+            <div class="bg-white rounded-2xl shadow-xl p-8 mx-4">
+                <h1 class="text-4xl md:text-6xl font-bold text-blue-800 mb-4">
+                    🎉 SELAMAT ULANG TAHUN! 🎉
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-600 font-semibold">
+                    Cieeee udah 19 tahun nih yeeee!!
+                </p>
+            </div>
+        </header>
+
+        <!-- Birthday Image -->
+        <div class="flex justify-center mb-12">
+            <div class="w-full max-w-md">
+                <img 
+                    src="aden7.jpg" 
+                    alt="Ilustrasi ulang tahun ke-19 dengan tema biru, menunjukkan kue ulang tahun dengan 19 lilin, balon biru, dan dekorasi pesta" 
+                    class="w-full h-auto rounded-2xl shadow-xl border-4 border-blue-300"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+                >
+                <div class="hidden bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl shadow-xl h-64 flex items-center justify-center text-white text-center p-4">
+                    <p class="text-xl">🎂 Selamat Ulang Tahun ke-19! 🎈</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Birthday Message -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 mb-12 mx-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-blue-800 mb-6 text-center">
+                For my best friend,
+            </h2>
+            
+            <div class="prose prose-lg max-w-none text-gray-700">
+                <p class="mb-4 leading-relaxed">
+                    hari special cuk, <strong class="text-blue-600">Selamat Ulang Tahun yang ke-19!</strong> 
+                    Semoga di usia ini, banyak impian dan harapan yang dapat terwujud.
+                </p>
+                
+                <p class="mb-4 leading-relaxed">
+                    List Usia 19 tahun, Semoga di usia ini:
+                </p>
+                
+                <ul class="list-disc list-inside mb-4 space-y-2 text-blue-700">
+                    <li>Masuk Univ impian </li>
+                    <li>Kesehatan pastinya</li>
+                    <li>Punya mobil Skyline GT-R</li>
+                    <li>Dapat bintang</li>
+                    <li>dan jangan lupa, bawa aku ke china</li>
+                </ul>
+                
+                <p class="mb-4 leading-relaxed">
+                    terimakasih sudah menjadi teman terbaik dalam kehidupanku, tidak menyangka ada banyak teman 
+                    yang datang kepaku salah satunya yaitu kamu, I feel so lucky to have u ♡ and I'm lucky to be ur friend
+                </p>
+                
+                <p class="text-center mt-8">
+                    <span class="text-2xl font-bold text-blue-800 typewriter">
+                        Happy 19th Birthday! 🎂✨
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Memory Gallery -->
+        <div class="bg-blue-50 rounded-2xl shadow-xl p-8 mb-12 mx-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-blue-800 mb-6 text-center">
+                The Best Memory
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="group">
+                    <img src="aden8.jpg" 
+                        alt="Kenangan bahagia bersama teman tersenyum di taman dengan latar belakang hijau" 
+                        class="w-full h-48 object-cover rounded-lg shadow-md group-hover:scale-105 transition-transform duration-300"
+                    >
+                </div>
+                <div class="group">
+                    <img 
+                        src="aden9.jpg" 
+                        alt="Momen tertawa bersama di kafe dengan minuman dan makanan di atas meja" 
+                        class="w-full h-48 object-cover rounded-lg shadow-md group-hover:scale-105 transition-transform duration-300"
+                    >
+                </div>
+                <div class="group">
+                    <img 
+                        src="aden10.jpg" 
+                        alt="Petualangan bersama di alam terbuka dengan pemandangan gunung yang indah" 
+                        class="w-full h-48 object-cover rounded-lg shadow-md group-hover:scale-105 transition-transform duration-300"
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- Birthday Wish -->
+        <div class="bg-gradient-to-r from-blue-500 to-blue-700 rounded-2xl shadow-xl p-8 mb-12 mx-4 text-white">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">
+                Doa dan Harapanku Untukmu
+            </h2>
+            
+            <div class="text-center">
+                <p class="text-lg mb-4 italic">
+                    "Semoga di usia 19 tahun ini, kamu menemukan kebahagiaan sejati, 
+                    meraih kesuksesan yang kamu impikan, dan selalu dikelilingi oleh 
+                    orang-orang yang mencintaimu. Tambahin jangan bang? semoga menemukan cinta sejati heheheh😁😁"
+                </p>
+                
+                <!-- Wish Button -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
+                    <button onclick="showBirthdayWish()" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300 flex items-center">
+                        🎁 Klik untuk Wish Spesial!
+                    </button>
+                    
+                    <!-- Music Button -->
+                    <button id="music-button" onclick="toggleMusic()" class="music-btn bg-blue-800 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-900 transition-colors duration-300 flex items-center">
+                        🎵 Buat kamu
+                    </button>
+                </div>
+                
+                <div id="special-wish" class="hidden mt-6 p-4 bg-blue-800 rounded-lg">
+                    <p class="text-xl font-bold">I may not be the first person to color ur life, but i'm lucky to be able to enter and color of ur life, thank u for
+                    being such a great person, you are amazing 🌟</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Countdown to Next Birthday -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 mx-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-blue-800 mb-6 text-center">
+                Hitung Mundur ke Ulang Tahun Selanjutnya!
+            </h2>
+            
+            <div class="grid grid-cols-4 gap-4 text-center">
+                <div class="p-4 bg-blue-100 rounded-lg">
+                    <div id="days" class="text-3xl font-bold text-blue-700">00</div>
+                    <div class="text-blue-600">Hari</div>
+                </div>
+                <div class="p-4 bg-blue-100 rounded-lg">
+                    <div id="hours" class="text-3xl font-bold text-blue-700">00</div>
+                    <div class="text-blue-600">Jam</div>
+                </div>
+                <div class="p-4 bg-blue-100 rounded-lg">
+                    <div id="minutes" class="text-3xl font-bold text-blue-700">00</div>
+                    <div class="text-blue-600">Menit</div>
+                </div>
+                <div class="p-4 bg-blue-100 rounded-lg">
+                    <div id="seconds" class="text-3xl font-bold text-blue-700">00</div>
+                    <div class="text-blue-600">Detik</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg">Dibuat dengan ❤️ untuk ulang tahun spesialmu</p>
+        </div>
+    </footer>
+
+    <!-- Audio Element -->
+    <audio id="birthday-song" loop>
+        <source src="BFF.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <script>
+        // Audio variables
+        let isPlaying = false;
+        const audio = document.getElementById('birthday-song');
+        const musicButton = document.getElementById('music-button');
+        
+        // Confetti Animation
+        function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                confetti.style.width = (Math.random() * 10 + 5) + 'px';
+                confetti.style.height = confetti.style.width;
+                container.appendChild(confetti);
+                
+                // Remove confetti after animation completes
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000);
+            }
+        }
+        
+        // Create confetti every 2 seconds
+        setInterval(createConfetti, 2000);
+        createConfetti(); // Initial confetti
+        
+        // Special Wish Button
+        function showBirthdayWish() {
+            const wish = document.getElementById('special-wish');
+            wish.classList.remove('hidden');
+            wish.classList.add('animate-pulse');
+            
+            // Create extra confetti when button is clicked
+            for (let i = 0; i < 30; i++) {
+                createConfetti();
+            }
+        }
+        
+        // Music Toggle Function
+        function toggleMusic() {
+            if (isPlaying) {
+                // Stop music
+                audio.pause();
+                audio.currentTime = 0;
+                musicButton.innerHTML = '🎵 Putar Lagu Ulang Tahun';
+                musicButton.classList.remove('playing');
+                musicButton.classList.remove('bg-blue-600');
+                musicButton.classList.add('bg-blue-800');
+            } else {
+                // Play music
+                audio.play().catch(error => {
+                    console.log('Autoplay prevented:', error);
+                    // Show alert if autoplay is blocked
+                    alert('Klik tombol "Putar Lagu Ulang Tahun" sekali lagi untuk memulai musik!');
+                });
+                musicButton.innerHTML = '⏸️ Hentikan Musik';
+                musicButton.classList.add('playing');
+                musicButton.classList.remove('bg-blue-800');
+                musicButton.classList.add('bg-blue-600');
+            }
+            isPlaying = !isPlaying;
+        }
+        
+        // Audio event listeners
+        audio.addEventListener('play', function() {
+            isPlaying = true;
+            musicButton.innerHTML = '⏸️ Hentikan Musik';
+            musicButton.classList.add('playing');
+            musicButton.classList.remove('bg-blue-800');
+            musicButton.classList.add('bg-blue-600');
+        });
+        
+        audio.addEventListener('pause', function() {
+            isPlaying = false;
+            musicButton.innerHTML = '🎵 Putar Lagu Ulang Tahun';
+            musicButton.classList.remove('playing');
+            musicButton.classList.remove('bg-blue-600');
+            musicButton.classList.add('bg-blue-800');
+        });
+        
+        // Countdown Timer
+        function updateCountdown() {
+            // Set next birthday date (assuming birthday is today next year)
+            const now = new Date();
+            const nextBirthday = new Date(now.getFullYear() + 1, now.getMonth(), now.getDate());
+            
+            const diff = nextBirthday - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial update
+        
+        // Play birthday sound on page load
+        window.addEventListener('load', function() {
+            try {
+                // Simple celebration sound using AudioContext
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                for (let i = 0; i < 3; i++) {
+                    setTimeout(() => {
+                        const oscillator = audioContext.createOscillator();
+                        oscillator.type = 'sine';
+                        oscillator.frequency.setValueAtTime(440 + (i * 100), audioContext.currentTime);
+                        
+                        const gainNode = audioContext.createGain();
+                        gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+                        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                        
+                        oscillator.connect(gainNode);
+                        gainNode.connect(audioContext.destination);
+                        
+                        oscillator.start();
+                        oscillator.stop(audioContext.currentTime + 0.5);
+                    }, i * 200);
+                }
+            } catch (e) {
+                console.log('Audio not supported');
+            }
+        });
+    </script>
+</body>
+</html>
+
